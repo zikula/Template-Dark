@@ -49,7 +49,7 @@ header.navbar {
     #sidebar {
         position: fixed;
         overflow-y: auto;
-        height: 72.5%;
+        height: 85%;
     }
 }
 @media (max-width: 960px) {
