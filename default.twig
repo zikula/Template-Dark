@@ -41,8 +41,8 @@
                             </p>
                             <ul class="nav flex-column">
                                 {% for itemId, item in section.items %}
-                                    <li class="nav-item{{ itemId == currentMenu ? ' active' }}">
-                                        <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}" class="nav-link">
+                                    <li class="nav-item">
+                                        <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}" class="nav-link{{ itemId == currentMenu ? ' active' }}">
                                             {{ item.text|raw }}
                                         </a>
                                     </li>
