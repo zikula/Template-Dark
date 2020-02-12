@@ -33,7 +33,6 @@ header.navbar {
     height: auto;
     line-height: 50px;
     margin-left: 20px;
-    margin-bottom: 20px;
     color: #df691a;
 }
 .navbar a.navbar-brand:hover {
@@ -50,7 +49,7 @@ header.navbar {
     #sidebar {
         position: fixed;
         overflow-y: auto;
-        height: 92.5%;
+        height: 72.5%;
     }
 }
 @media (max-width: 960px) {
@@ -73,6 +72,11 @@ header.navbar {
 
 #sidebar .text-muted {
     color: #859AAF;
+    margin-bottom: 0;
+}
+#sidebar .nav a.nav-link {
+    font-size: 17px;
+    padding-top: 0;
 }
 
 pre {
@@ -86,7 +90,6 @@ pre code {
     border: none;
     background-color: #1D2B3A;
 }
-
 code {
     font-size: 85%;
     padding: 4px 4px 1px;
