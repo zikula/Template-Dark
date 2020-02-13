@@ -1,0 +1,7 @@
+How to update highlight.js build:
+
+1. Visit https://highlightjs.org/download/
+2. At "Custom package" enable the following languages:
+  - Common: Apache, Bash, CSS, CoffeeScript, Diff, HTML, XML, HTTP, JSON, JavaScript, Less, Markdown, Nginx, PHP, Properties, SQL, Shell Session, TOML, TypeScript, YAML, plaintext
+  - Other: Twig
+3. Download
