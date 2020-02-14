@@ -70,9 +70,12 @@ header.navbar {
     margin-left: 50px;
 }
 
-#sidebar .text-muted {
+#sidebar .text-muted > a {
     color: #859AAF;
     margin-bottom: 0;
+}
+#sidebar .nav.collapsing > li.nav-item {
+    width: 100%;
 }
 #sidebar .nav a.nav-link {
     font-size: 17px;

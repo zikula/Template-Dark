@@ -37,9 +37,11 @@
                     <nav id="sidebar" class="col-md-3 col-xl-2" role="navigation">
                         {% for section in menu.sections %}
                             <p class="text-muted">
-                                {{ section.name }}
+                                <a href="#section{{ loop.index }}" data-toggle="collapse">
+                                    {{ section.name }}
+                                </a>
                             </p>
-                            <ul class="nav flex-column">
+                            <ul id="section{{ loop.index }}" class="nav flex-column collapse{% if loop.first %} show{% endif %}">
                                 {% for itemId, item in section.items %}
                                     <li class="nav-item">
                                         <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}" class="nav-link{{ itemId == currentMenu ? ' active' }}">
@@ -59,13 +61,6 @@
         <script src="{{ baseUrl }}/js/jquery.min.js"></script>
         <script src="{{ baseUrl }}/js/bootstrap.bundle.min.js"></script>
         <script src="{{ baseUrl }}/js/highlight.pack.js"></script>
-        <script>
-            $(function() {
-                $('section > h1').wrap('<div class="page-header" />');
-                {# Syntax highlighting #}
-                hljs.initHighlightingOnLoad();
-                $("a[href^='http']:not([href*='docs.ziku.la'])").attr('target', '_blank');
-            });
-        </script>
+        <script src="{{ baseUrl }}/js/site.js"></script>
     </body>
 </html>
