@@ -8,6 +8,9 @@
         // open external links in new window
         $("a[href^='http']:not([href*='docs.ziku.la'])").attr('target', '_blank');
 
-        $('#sidebar .nav a.nav-link.active').parents('.collapse').addClass('show');
+        if ($('#sidebar .nav a.nav-link.active').length > 0) {
+            $('#sidebar .nav.collapse.show').removeClass('show');
+            $('#sidebar .nav a.nav-link.active').parents('.collapse').addClass('show');
+        }
     });
 })(jQuery)
